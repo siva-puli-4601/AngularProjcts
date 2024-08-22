@@ -1,0 +1,31 @@
+hello
+<app-header></app-header>
+
+<button (click)="clickEvent()">Obser</button>
+<div *ngIf="Apidata">
+    <ul>
+        <li *ngFor="let item of Apidata">{{item | json}}</li>
+    </ul>
+</div>
+<div *ngIf="!Apidata">
+  <h1>Loading.....</h1>
+</div>
+<h1 ></h1>
+<input #username type="text"/>
+<input #password type="password"/>
+<button type="button" (click)="login(username.value,password.value)" >Login</button>
+<button (click)="getData()">Get</button>
+<div *ngIf="items">
+    <table>
+        <thead>
+            <th>id</th>
+            <th>userid</th>
+        </thead>
+        <tr *ngFor="let item of items">
+            <td>{{item.id}}</td>
+            <td>{{item.userId}}</td>
+        </tr>
+    </table>
+</div>
+<router-outlet></router-outlet>
+<button type="button" (click)="onClick()">click me</button>

@@ -1,0 +1,11 @@
+<h1>TODOLIST</h1>
+<input type="text" [(ngModel)]="todoitem" />
+<button type="button" (click)="AddItem()" [disabled]="!todoitem.length">Add</button>
+<button type="button"  (click)="ResetItem()" [disabled]="!todoitem.length">Reset</button>
+
+<div *ngIf="totaltodo.length">
+  <div *ngFor="let item of totaltodo;index as i">
+      <span>{{item}}</span><span><button (click)="Delete(i)">DEL</button></span>
+  </div>
+</div>
+

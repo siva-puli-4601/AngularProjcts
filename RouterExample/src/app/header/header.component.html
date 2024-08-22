@@ -1,0 +1,8 @@
+<a routerLink="about" >About</a>
+<ul>
+<div *ngFor="let item of items">
+  <li><span>{{item.name}}</span> <a [routerLink]="['/compoinfo',item.id,item.name]">Cilck</a></li>
+</div>
+<div *ngFor="let item of items">
+  <li><span>{{item.name}}</span><button type="button" (click)="onClick(item.id)">Click I will Show</button></li>
+</div>
