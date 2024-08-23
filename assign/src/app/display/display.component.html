@@ -1,0 +1,22 @@
+<!-- src/app/display/display.component.html -->
+<div class="card-container">
+    <div *ngIf="type==='user'">
+    <div *ngFor="let item of ele" class="card">
+      <h3>{{ item.username }}</h3>
+      <p><strong>Email:</strong> {{ item.email }}</p>
+      
+      <p><strong>Type:</strong> {{ item.type }}</p>
+    </div>
+    <div>
+        <div *ngFor="let item of ele" class="card">
+            <h3>{{ item.username }}</h3>
+            <p><strong>Email:</strong> {{ item.email }}</p>
+            
+            <p><strong>Type:</strong> {{ item.type }}</p>
+            <!-- <button type="button" (click)="Edit(item.email)">Edit</button>
+            <button type="button" (click)="Delete(item.email)">Edit</button> -->
+          </div>
+    </div>
+  </div>
+  </div>
+  
